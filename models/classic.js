@@ -8,6 +8,7 @@ class ClassicModel extends HTTP {
         this.request({
             url: 'classic/latest',
             success: (res) => {
+                console.log(res);
                 sCallback(res)
                 this._setLatestIndex(res.index)
                 let key = this._getKey(res.index)

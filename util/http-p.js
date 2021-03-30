@@ -19,7 +19,7 @@ class HTTP{
             data:data,
             header:{
                 'content-type':'application/json',
-                'appkey':config.appkey
+                'Authorization': 'Basic ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SjFhV1FpT2pJc0luTmpiM0JsSWpvNExDSnBZWFFpT2pFMk1UY3dPVGs1TmpZc0ltVjRjQ0k2TVRZeE9UWTVNVGsyTm4wLnY1TVhQeGgzc2I1anF0Z1Bucndya2ZIdWxuV2Z4cGM0T2g5SERMTkVVOWM6'
             },
             success:(res)=>{
                 const code = res.statusCode.toString()

@@ -25,14 +25,9 @@ Page({
   },
 
   onShow(options) {
-    this.userAuthorized1()
+    this.userAuthorized()
     this.getMyBookCount()
     this.getMyFavor()
-    // wx.getUserInfo({
-    //   success:data=>{
-    //     console.log(data)
-    //   }
-    // })
   },
 
   getMyFavor() {
@@ -52,7 +47,7 @@ Page({
       })
   },
 
-  userAuthorized1() {
+  userAuthorized() {
     promisic(wx.getSetting)()
       .then(data => {
         if (data.authSetting['scope.userInfo']) {
@@ -70,22 +65,22 @@ Page({
   },
 
 
-  userAuthorized() {
-    wx.getSetting({
-      success: data => {
-        if (data.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: data => {
-              this.setData({
-                authorized: true,
-                userInfo: data.userInfo
-              })
-            }
-          })
-        }
-      }
-    })
-  },
+  // userAuthorized() {
+  //   wx.getSetting({
+  //     success: data => {
+  //       if (data.authSetting['scope.userInfo']) {
+  //         wx.getUserInfo({
+  //           success: data => {
+  //             this.setData({
+  //               authorized: true,
+  //               userInfo: data.userInfo
+  //             })
+  //           }
+  //         })
+  //       }
+  //     }
+  //   })
+  // },
 
 
 
