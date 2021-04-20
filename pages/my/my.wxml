@@ -1,6 +1,5 @@
 <view class="container">
     <image src="/images/my/my@bg.png" class="bg"></image>
-    <!-- <open-data type="userAvatarUrl" class="avatar avatar-position"/> -->
     <v-button wx:if="{{!authorized}}" open-type="getUserInfo" class="avatar-position" bind:getuserinfo="onGetUserInfo">
         <image slot="img" class="avatar" src="/images/my/my.png" />
     </v-button>
@@ -12,7 +11,7 @@
     <view class="about-container">
         <view bind:tap="onJumpToAbout" class="about-us">
             <image src="/images/my/about.png" />
-            <text class="description">关于我们</text>
+            <text class="description">关于我</text>
         </view>
         <view class="about-us">
             <text class="book-num">{{bookCount}}</text>
@@ -30,4 +29,3 @@
     </view>
 
 </view>
-<image bind:tap="onStudy" class="study" src="/images/my/study.png"></image>
